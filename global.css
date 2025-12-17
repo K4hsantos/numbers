@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+.container {
+    width: 24rem;
+    max-width: 19rem;
+    margin-inline: auto;
+}
+
 :root {
     /* Content */
     --content-primary: #FFFFFF;
@@ -53,6 +59,11 @@
 
 
 @media (width >= 80em) {
+    .container {
+        width: 85rem;
+        max-width: 68rem;
+        margin-inline: auto;
+    }
     :root {
         --display-large: 800 72px/130% var(--font-family-1);
         --display-medium: 800 40px/130% var(--font-family-1);
