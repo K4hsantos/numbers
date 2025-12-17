@@ -1,0 +1,31 @@
+@import url(global.css);
+
+body {
+    background-color: var(--background-primary);
+    background-image: url(assets/img/bg.png);
+
+    & #logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 2rem;
+    }
+
+    & div {
+            margin-top: 2.87rem;
+        & span {
+            font: var(--overline);
+            color: transparent;
+            background: var(--gradient-content);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+
+        & h1 {
+            margin-top: 0.5rem;
+            font: var(--display-medium);
+            color: var(--content-primary);
+        }
+    }
+}
