@@ -50,3 +50,12 @@
     --label-small: 600 16px/150% var(--font-family-3);
     
 }
+
+
+@media (width >= 80em) {
+    :root {
+        --display-large: 800 72px/130% var(--font-family-1);
+        --display-medium: 800 40px/130% var(--font-family-1);
+        --display-small: 600 32px/130% var(--font-family-1);
+    }
+}
