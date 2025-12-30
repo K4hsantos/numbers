@@ -27,5 +27,33 @@ body {
             font: var(--display-medium);
             color: var(--content-primary);
         }
+
+        & h2 {
+            margin-top: 2rem;
+            font: var(--label-medium);
+            color: var(--content-primary);
+        }
+
+        & p {
+            font: var(--paragraph-medium);
+            color: var(--content-primary);
+            font-weight: 300;
+        }
+    }
+
+    & form {
+        margin-top: 4rem;
+
+        & label {
+            display: flex;
+            font: var(--label-medium);
+            /* font-size: 1rem; */
+            font-weight: 500;
+            color: var(--content-primary);
+        }
+
+        & input[type="number"] {
+            background-color: red;
+        }
     }
 }

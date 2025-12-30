@@ -37,7 +37,26 @@
     <div>
         <span>ONLINE - GRATUITO</span>
         <h1>SORTEADOR DE NÚMEROS</h1>
+
+        <h2>QUERO SORTEAR:</h2>
+        <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
     </div>
+
+    <form>
+            <label for="amount">NÚMEROS</label>
+            <input type="number" name="amount" id="amount">
+    
+            <label for="min">DE</label>
+            <input type="number" name="min" id="min">
+    
+            <label for="max">DE</label>
+            <input type="number" name="max" id="max">
+    
+            <input type="checkbox" name="check" id="check">
+            <label for="check">Não repetir números</label>
+
+        <button>Sortear</button>
+    </form>
 
     <script src="app.js"></script>
 </body>

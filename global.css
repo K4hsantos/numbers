@@ -45,10 +45,10 @@
     --display-medium: 800 40px/130% var(--font-family-1);
     --display-small: 600 32px/130% var(--font-family-1);
 
-    --font-family-2: 'Roboto-Mono', 'sans-serif';
+    --font-family-2: 'Roboto Mono', 'sans-serif';
     --overline: 700 16px/150% var(--font-family-2);
 
-    --font-family-3: 'Roboto-Flex', 'sans-serif';
+    --font-family-3: 'Roboto Flex', 'sans-serif';
     --paragraph-large: 700 16px/150% var(--font-family-3);
     --paragraph-medium: 700 14px/150% var(--font-family-3);
     --paragraph-small: 700 12px/150% var(--font-family-3);
