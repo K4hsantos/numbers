@@ -42,18 +42,14 @@ body {
     }
 
     & form {
-        margin-top: 4rem;
-
-        & label {
-            display: flex;
-            font: var(--label-medium);
-            /* font-size: 1rem; */
-            font-weight: 500;
-            color: var(--content-primary);
+        & fieldset {
+            border: 0px
         }
 
-        & input[type="number"] {
-            background-color: red;
+        & label {
+            font: var(--label-medium);
+            color: var(--content-primary
+            );
         }
     }
 }
