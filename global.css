@@ -5,8 +5,8 @@
 }
 
 .container {
-    width: 24rem;
-    max-width: 19rem;
+    max-width: 375px;
+    width: min(375px, calc(100% - 64px));
     margin-inline: auto;
 }
 
@@ -64,8 +64,7 @@
 
 @media (width >= 80em) {
     .container {
-        width: 85rem;
-        max-width: 68rem;
-        margin-inline: auto;
+        max-width: 1280px;
+        width: min(1280px, calc(100% - 64px));
     }
 }

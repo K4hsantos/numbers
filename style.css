@@ -43,13 +43,55 @@ body {
 
     & form {
         & fieldset {
-            border: 0px
+            display: flex;
+            gap: 1.5rem;
+            border: 0px;
+
+            & .field {
+
+                & label{
+                    display: block;
+                    text-align: center;
+                    font-size: 1rem;
+                    margin-bottom: .5rem;
+                }
+
+               & input[type="number"] {
+                width: 5.3rem;
+                height: 4rem;
+                border-radius: .5rem;
+                display: flex;
+                border: none;
+                background-color: var( --background-secondary);
+                text-align: center;
+                font: var(--display-small);
+                color: var(--content-primary);
+                margin-bottom: 2rem;
+               }
+
+                & input[type="number"]::-webkit-inner-spin-button,
+                & input[type="number"]::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+                }
+
+            }
         }
 
         & label {
             font: var(--label-medium);
-            color: var(--content-primary
-            );
+            color: var(--content-primary);
+        }
+
+        & button {
+            margin-top: 4rem;
+            width: 19.43rem;
+            height: 4rem;
+            border-radius: .5rem;
+            font: var(--label-medium);
+            background: var(--background-tertiary);
+            color: var(--content-primary);
+            border: none;
         }
     }
 }
