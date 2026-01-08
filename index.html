@@ -93,7 +93,67 @@
     </div>
   </section>
 
+  <div class="desktop-only">
+    <section>
+      <div id="logo">
+      <img src="assets/icons/logo.svg" alt="logo">
+      </div>
 
-  <script src="app.js"></script>
-</body>
+      <div>
+        <span>ONLINE - GRATUITO</span>
+        <h1>SORTEADOR DE NÚMEROS</h1>
+      </div>
+
+      <div class="doubts">
+        <div>
+          <p class="people"> <img src="assets/icons/people.svg" alt="">Como funciona o sorteador de números?</p>
+          <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+        </div>
+      
+        <div>
+          <p class="people"> <img src="assets/icons/people.svg" alt="">Posso escolher o intervalo dos números?</p>
+          <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+        </div>
+      </div>
+    </section>
+    
+    <section>
+      <form>
+        <h2>QUERO SORTEAR:</h2>
+        <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+
+        <fieldset class="numbers">
+          
+          <div class="field">
+            <label for="amount">NÚMEROS</label>
+            <input type="number" id="amount" name="amount">
+          </div>
+          
+          <div class="field">
+            <label for="min">DE</label>
+            <input type="number" id="min" name="min">
+          </div>
+          
+          <div class="field">
+            <label for="max">DE</label>
+            <input type="number" id="max" name="max">
+          </div>
+        </fieldset>
+        
+        <fieldset class="option flex">
+          <span class="slide"></span>
+          
+          <label>
+            <input type="checkbox" name="check">
+            Não repetir números
+          </label>
+        </fieldset>
+        
+        <button type="submit">SORTEAR <img src="assets/icons/vector.svg" alt=""></button>
+      </form>
+    </section>
+  </div>
+    
+    <script src="app.js"></script>
+  </body>
 </html>

@@ -50,10 +50,11 @@ body {
             & label {
             font: var(--label-medium);
             color: var(--content-primary);
+
             }
 
             & .field {
-
+                position: relative;
                 & label{
                     display: block;
                     text-align: center;
@@ -67,6 +68,7 @@ body {
                 border-radius: .5rem;
                 display: flex;
                 border: none;
+                outline: none;
                 background-color: var( --background-secondary);
                 text-align: center;
                 font: var(--display-small);
@@ -81,6 +83,35 @@ body {
                 }
 
             }
+
+            & .field:hover::after {
+                content: '';
+                position: absolute;
+                right: -0.8px;
+                bottom: 31px;
+
+                width: 101%;
+                height: 51%;
+
+                background-image: var(--gradient-background);
+                border-radius: .5rem;
+                z-index: -1;
+            }
+
+            & .field:focus-within::after {
+                content: '';
+                position: absolute;
+                right: -2.5px;
+                bottom: 28.5px;
+
+                width: 105%;
+                height: 55%;
+
+                background-image: var(--gradient-background);
+                border-radius: .5rem;
+                z-index: -1;
+            }
+
         }
 
         & .option {
@@ -124,7 +155,6 @@ body {
                         transform: scale(1);
                         transition: .5s;
                         cursor: pointer;
-
                     }
                 }
                 
@@ -135,6 +165,7 @@ body {
         }   
 
         & button {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -147,6 +178,22 @@ body {
             background: var(--background-tertiary);
             color: var(--content-primary);
             border: none;
+            cursor: pointer;
+            outline: none;
+
+            &:hover::after {
+                content: '';
+                position: absolute;
+                right: -2.5px;
+                bottom: -0.8px;
+
+                width: 101%;
+                height: 104%;
+
+                background-image: var(--gradient-background);
+                border-radius: .5rem;
+                z-index: -1;
+            }
         }
     }
 
@@ -154,6 +201,10 @@ body {
         & div {
             margin-bottom: 3rem;
             & .people {
+                & img {
+                    filter: invert(24%) sepia(64%) saturate(4000%)
+                    hue-rotate(245deg) brightness(95%) contrast(95%);
+                }
                 font: var(--paragraph-medium);
                 color: var(--content-brand);
             }
@@ -161,6 +212,53 @@ body {
             & p {
                 font: var(--paragraph-small);
                 font-weight: 300;
+            }
+        }
+    }
+}
+
+@media (width >= 80em) {
+    section { 
+
+        #logo {
+            justify-content: initial;
+
+            margin-top: 4.75rem;
+            margin-bottom: 4.75rem;
+        }
+
+        & div {
+
+            & h1 {
+                max-width: 33rem;
+                font: var(--display-large);
+            }
+        }
+
+        
+        & .doubts {
+            & div {
+                & .people {
+                    font: var(--paragraph-medium);
+                }
+
+                & p {
+                    max-width: 22rem;
+                }
+            }
+        }
+    }
+
+    section {
+        & form {
+            margin-top: 5rem;
+
+            & p {
+                max-width: 25.5rem;
+            }
+
+            & button {
+                width: 25rem;
             }
         }
     }

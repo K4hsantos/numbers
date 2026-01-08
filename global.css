@@ -45,7 +45,7 @@
     --accent-red: #E9A9B3;
 
     /* Gradient */
-    --gradient-border: #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%;
+    --gradient-border: linear-gradient(90deg, #77C0AF 0%, #D1DC97 14.84%, #E9A9B3 32.15%, #D586E0 65.79%, #91A1FA 84.58%); 
 
     --gradient-background: linear-gradient(90deg, #D586E0 0%, #91A1FA 98.93%);
 
@@ -73,11 +73,15 @@
 @media (width >= 80em) {
     .container {
         max-width: 1280px;
-        width: min(1280px, calc(100% - 64px));
+        width: min(1280px, calc(100% - 32px));
     }
 
     .desktop-only {
         display: initial;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* gap: 6.75rem; */
     }
 
     .mobile-only {
