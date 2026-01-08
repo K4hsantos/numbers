@@ -137,6 +137,10 @@ body {
 
 
         & button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
             margin-top: 4rem;
             width: 19.43rem;
             height: 4rem;
