@@ -134,8 +134,6 @@ body {
             }
         }   
 
-
-
         & button {
             display: flex;
             justify-content: center;
@@ -149,6 +147,21 @@ body {
             background: var(--background-tertiary);
             color: var(--content-primary);
             border: none;
+        }
+    }
+
+    & .doubts {
+        & div {
+            margin-bottom: 3rem;
+            & .people {
+                font: var(--paragraph-medium);
+                color: var(--content-brand);
+            }
+    
+            & p {
+                font: var(--paragraph-small);
+                font-weight: 300;
+            }
         }
     }
 }

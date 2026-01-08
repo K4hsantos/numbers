@@ -30,49 +30,70 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="container">
+
+  <section class="mobile-only">
     <div id="logo">
-        <img src="assets/icons/logo.svg" alt="logo">
+    <img src="assets/icons/logo.svg" alt="logo">
     </div>
-    
+
     <div>
-        <span>ONLINE - GRATUITO</span>
-        <h1>SORTEADOR DE NÚMEROS</h1>
-
-        <h2>QUERO SORTEAR:</h2>
-        <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
+      <span>ONLINE - GRATUITO</span>
+      <h1>SORTEADOR DE NÚMEROS</h1>
+      
+      <h2>QUERO SORTEAR:</h2>
+      <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
     </div>
+  </section>
 
-<form>
-  <fieldset class="numbers">
 
-    <div class="field">
-      <label for="amount">NÚMEROS</label>
-      <input type="number" id="amount" name="amount">
+  <section class="mobile-only">
+    <form>
+      <fieldset class="numbers">
+  
+        <div class="field">
+          <label for="amount">NÚMEROS</label>
+          <input type="number" id="amount" name="amount">
+        </div>
+  
+        <div class="field">
+          <label for="min">DE</label>
+          <input type="number" id="min" name="min">
+        </div>
+  
+        <div class="field">
+          <label for="max">DE</label>
+          <input type="number" id="max" name="max">
+        </div>
+      </fieldset>
+  
+      <fieldset class="option flex">
+          <span class="slide"></span>
+  
+          <label>
+            <input type="checkbox" name="check">
+            Não repetir números
+          </label>
+      </fieldset>
+  
+        <button type="submit">SORTEAR <img src="assets/icons/vector.svg" alt=""></button>
+    </form>
+  </section>
+
+  <section class="mobile-only">
+    <div class="doubts">
+      <div>
+        <p class="people"> <img src="assets/icons/people.svg" alt="">Como funciona o sorteador de números?</p>
+        <p>O sorteador utiliza um algoritmo de geração aleatória para criar números dentro do intervalo especificado pelo usuário.</p>
+      </div>
+  
+      <div>
+        <p class="people"> <img src="assets/icons/people.svg" alt="">Posso escolher o intervalo dos números?</p>
+        <p>Sim, você pode definir os valores mínimo e máximo para o intervalo dos números sorteados.</p>
+      </div>
     </div>
-
-    <div class="field">
-      <label for="min">DE</label>
-      <input type="number" id="min" name="min">
-    </div>
-
-    <div class="field">
-      <label for="max">DE</label>
-      <input type="number" id="max" name="max">
-    </div>
-  </fieldset>
-
-  <fieldset class="option flex">
-    <span class="slide"></span>
-    <label>
-      <input type="checkbox" name="check">
-      Não repetir números
-    </label>
-  </fieldset>
-
-  <button type="submit">SORTEAR <img src="assets/icons/vector.svg" alt=""></button>
-</form>
+  </section>
 
 
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
