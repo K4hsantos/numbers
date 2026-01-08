@@ -42,10 +42,15 @@ body {
     }
 
     & form {
-        & fieldset {
+        & .numbers {
             display: flex;
             gap: 1.5rem;
             border: 0px;
+
+            & label {
+            font: var(--label-medium);
+            color: var(--content-primary);
+            }
 
             & .field {
 
@@ -78,10 +83,58 @@ body {
             }
         }
 
-        & label {
-            font: var(--label-medium);
-            color: var(--content-primary);
-        }
+        & .option {
+            position: relative;
+            border: none;
+            gap: 1rem;
+            align-items: center;
+            
+
+                & label {
+                    position: absolute;
+                    font: var(--paragraph-small);
+                    font-weight: 400;
+                    color: var(--content-primary);
+                    left: 4rem;
+                
+                & input[type="checkbox"] {
+                    position: absolute;
+                    width: 3rem;
+                    height: 1.8rem;
+                    outline: none;
+                    -webkit-appearance: none;
+                    background: var(--content-secondary);
+                    border-radius: 3rem;
+                    right: 8rem;
+                    top: -.3rem;
+
+                    &:checked {
+                        background: var(--gradient-background);
+                    }
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        border-radius: 1rem;
+                        background-color: var(--content-primary);
+                        top: 2.5px;
+                        left: 4px;
+                        transform: scale(1);
+                        transition: .5s;
+                        cursor: pointer;
+
+                    }
+                }
+                
+                & input[type="checkbox"]:checked::before {
+                    left: 20px;
+                }
+            }
+        }   
+
+
 
         & button {
             margin-top: 4rem;
