@@ -9,24 +9,6 @@ body {
     background-image: url(assets/img/bg.png);
 }
 
-.container {
-    max-width: 375px;
-    width: min(375px, calc(100% - 64px));
-    margin-inline: auto;
-}
-
-.desktop-only {
-    display: none;
-}
-
-.mobile-only {
-    display: initial;
-}
-
-.flex {
-    display: flex;
-}
-
 :root {
     /* Content */
     --content-primary: #FFFFFF;
@@ -75,21 +57,4 @@ body {
 }
 
 
-@media (width >= 80em) {
-    .container {
-        max-width: 1280px;
-        width: min(1280px, calc(100% - 32px));
-    }
 
-    .desktop-only {
-        display: initial;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        /* gap: 6.75rem; */
-    }
-
-    .mobile-only {
-        display: none;
-    }
-}
