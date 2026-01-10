@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: var(--background-primary);
+    background-image: url(assets/img/bg.png);
+}
+
 .container {
     max-width: 375px;
     width: min(375px, calc(100% - 64px));
