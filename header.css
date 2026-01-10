@@ -1,0 +1,39 @@
+#header {
+    margin-top: 2.62rem;
+    & span {
+        display: block;
+        margin-top: 2rem;
+        font: var(--overline);
+        background: var(--gradient-content);
+        background-clip: text;
+        color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    & h1 {
+        margin-top: .5rem;
+        font: var(--display-medium);
+        color: var(--content-primary);
+    }
+}
+
+@media (width >= 80em) {
+    & #header {
+        margin-top: 5.75rem;
+
+        & img {
+            width: 15rem;
+        }
+
+        & span {
+            margin-top: 5.37rem;
+            font-size: 1.5rem;
+        }
+
+        & h1 {
+            margin-top: .5rem;
+            font: var(--display-large);
+            max-width: 31.8rem;
+        }
+    }
+}
