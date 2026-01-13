@@ -23,9 +23,13 @@
             border: none;
 
             & label {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
                 font: var(--label-medium);
                 color: var(--content-primary);
                 font-weight: 400;
+                font-size: 1.2rem;
             }
         
             & input[type='number'] {
@@ -89,6 +93,7 @@
                         display: block;
                         width: 1.2rem;
                         height: 1.2rem;
+                        cursor: pointer;
                         
                         border-radius: 50%;
                         background-color: white;

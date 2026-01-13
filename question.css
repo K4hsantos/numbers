@@ -1,0 +1,23 @@
+#question {
+    & .itens {
+        margin-top: 2rem;
+
+        
+        & span {
+            & img {
+                filter: invert(40%) sepia(64%) saturate(4000%) hue-rotate(245deg)
+                brightness(75%) contrast(95%);
+            }
+
+            font: var(--paragraph-medium);
+            font-weight: 400;
+            color: var(--content-brand);
+        }
+
+        & p {
+            font: var(--paragraph-small);
+            color: var(--content-primary);
+            font-weight: 300;
+        }
+    }
+}
