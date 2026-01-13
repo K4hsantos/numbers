@@ -22,6 +22,37 @@
             text-align: center;
             border: none;
 
+            & .field {
+                position: relative;
+
+                &:hover::before {
+                    content: '';
+                    position: absolute;
+                    top: 2.7rem;
+                    left: -.1rem;
+                    width: 6.15rem;
+                    height: 4.2rem;
+                    border-radius: .5rem;
+                    background: var(--gradient-border);
+
+                    z-index: -1;
+                }
+
+                &:focus-within::before {
+                    content: '';
+                    position: absolute;
+                    top: 2.55rem;
+                    left: -.25rem;
+                    width: 6.5rem;
+                    height: 4.4rem;
+                    border-radius: .5rem;
+                    background: var(--gradient-border);
+
+                    z-index: -1;
+                }
+                
+            }
+
             & label {
                 display: flex;
                 justify-content: center;
@@ -52,9 +83,9 @@
                 &::-webkit-outer-spin-button {
                     -webkit-appearance: none;
                     margin: 0;
+
                 }
             }
-
         }
 
         & .option {
@@ -110,6 +141,7 @@
         }
 
         & button {
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -126,6 +158,51 @@
 
             background-color: var(--background-tertiary);
             border: none;
+
+            &:hover::before {
+                    content: '';
+                    position: absolute;
+                    top: -.2rem;
+                    left: -.3rem;
+                    width: 20rem;
+                    height: 4.3rem;
+                    border-radius: .5rem;
+                    background: var(--gradient-border);
+
+                    z-index: -1;
+            }
         }
     }
+}
+
+@media (width >= 80em) {
+  .form-layout {
+    position: relative;
+  }
+
+  #form-wrap {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(-13rem);
+
+    max-width: 25rem;
+
+    & form {
+        & button {
+            width: 25rem;
+            max-width: 25rem;
+
+            &:hover::before {
+                content: '';
+                position: absolute;
+                top: -.15rem;
+                left: -.25rem;
+                width: 25.5rem;
+
+                z-index: -1;
+            }
+        }
+    }
+  }
 }

@@ -1,7 +1,7 @@
 #question {
+    margin-bottom: 5rem;
     & .itens {
         margin-top: 2rem;
-
         
         & span {
             & img {
@@ -19,5 +19,11 @@
             color: var(--content-primary);
             font-weight: 300;
         }
+    }
+}
+
+@media (width >= 80em) {
+    #question {
+        max-width: 22rem;
     }
 }
