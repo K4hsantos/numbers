@@ -1,3 +1,29 @@
+#view-sortear {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.25s ease;
+}
+
+#view-result {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+
+.show-result #view-sortear {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.show-result #view-result {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+
+
 #form-wrap {
     margin-top: 2rem;
 
@@ -176,8 +202,8 @@
 }
 
 #view-result {
-    /* position: relative; */
     & .results {
+        margin-top: 4rem;
         & h2 {
             text-align: center;
             font: var(--label-medium);
@@ -195,19 +221,54 @@
             font-weight: 400;
         }
 
-        & div {
+
+        & .frame {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            align-items: center;
+            margin: auto;
+
+            
+            margin-top: 4rem;
+            max-width: 5rem;
+            height: 5rem;
+            background-color: var(--background-brand);
+            border-radius: 1rem;
+
+            opacity: 0;
+            transform: scale(0);
+
+            position: relative;
+            background-color: transparent;
 
             & p {
             font: var(--display-medium);
-            color: var(--content-brand);
+            /* color: var(--content-brand); */
             font-weight: 600;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                inset: 0;
+                background-color: var(--background-brand);
+                border-radius: 1rem;
             }
         }
 
+            & .frame.is-loading {
+                opacity: 1;
+                animation: frame-in 0.5s ease-out forwards;
+
+                &::before {
+                animation: spin 1.2s linear infinite;
+            }
+            }
+
+
         & button {
+            position: relative;
+            margin-top: 5rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -222,11 +283,52 @@
             background-color: var(--background-tertiary);
             border: none;
             font-size: 1rem;
+
+           &:hover{
+                transition: .2s;
+                background: var(--background-secondary);
+            }
             
+            &:hover::before {
+            content: '';
+            position: absolute;
+            top: -.2rem;
+            left: -.3rem;
+            width: 20rem;
+            height: 4.3rem;
+            border-radius: .5rem;
+            background: var(--gradient-border);
+            z-index: -1;
+            }
         }
 
     }
 }
+
+@keyframes frame-in {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
 
 @media (width >= 80em) {
   .form-layout {
@@ -258,4 +360,76 @@
         }
     }
   }
+
+  #view-result {
+    position: relative;
+    & .results {
+        position: absolute;
+        top: -15rem;
+        left: 50rem;
+        margin-top: 4rem;
+        & h2 {
+            text-align: center;
+            font: var(--label-medium);
+            color: var(--content-primary);
+            font-weight: 400;
+            font-size: 1.3rem;
+        }
+
+        & span {
+            display: block;
+            text-align: center;
+            font: var(--overline);
+            color: var(--content-primary);
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        & div {
+            margin-top: 4rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+
+            & p {
+            font: var(--display-medium);
+            color: var(--content-brand);
+            font-weight: 600;
+            }
+        }
+
+        & button {
+            margin-top: 5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5rem;
+            width: 30rem;
+            max-width: 30rem;
+            height: 4rem;
+            border-radius: .5rem;
+
+            font: var(--label-medium);
+            color: var(--content-primary);
+
+            background-color: var(--background-tertiary);
+            border: none;
+            font-size: 1rem;
+
+            &:hover::before {
+            content: '';
+            position: absolute;
+            top: -.2rem;
+            left: -.3rem;
+            width: 30.5rem;
+            height: 4.3rem;
+            border-radius: .5rem;
+            background: var(--gradient-border);
+            z-index: -1;
+            }
+            
+        }
+
+    }
+}
 }
