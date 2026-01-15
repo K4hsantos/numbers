@@ -202,7 +202,10 @@
 }
 
 #view-result {
+    position: relative;
     & .results {
+        position: absolute;
+        top: -30rem;
         margin-top: 4rem;
         & h2 {
             text-align: center;
