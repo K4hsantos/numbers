@@ -7,18 +7,24 @@ const numberMax = document.querySelector("#max");
 
 form.addEventListener("submit", (event)=> {
 event.preventDefault();
-const numero = Number(numberAmount.value);
+const quantidade = Number(numberAmount.value);
 const minimo = Number(numberMin.value);
 const maximo = Number(numberMax.value);
 
-const validate = validateNumbers(numero, minimo, maximo);
+const validate = validateNumbers(quantidade, minimo, maximo);
 
 if (validate === false) {
     return false
-} else {
-    formLayout.classList.add("show-result")
+};
+
+const numberList = [];
+
+for (let i = 0; i < quantidade; i++) {
+    console.log(Math.floor(Math.random() * (maximo - minimo + 1)) + minimo)
 }
-})
+
+formLayout.classList.add("show-result");
+});
 
 function validateNumbers(amount, minimum, maximum) {
     if (amount <= 0) {
