@@ -20,8 +20,9 @@ if (validate === false) {
 const numberList = [];
 
 for (let i = 0; i < quantidade; i++) {
-    console.log(Math.floor(Math.random() * (maximo - minimo + 1)) + minimo)
+    numberList.push((Math.floor(Math.random() * (maximo - minimo + 1)) + minimo))
 }
+console.log(numberList)
 
 formLayout.classList.add("show-result");
 });
