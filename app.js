@@ -22,10 +22,15 @@ const numberList = [];
 for (let i = 0; i < quantidade; i++) {
     numberList.push((Math.floor(Math.random() * (maximo - minimo + 1)) + minimo))
 }
-console.log(numberList)
 
 formLayout.classList.add("show-result");
+
+const pNumber = document.querySelector(".frame p")
 });
+
+
+
+
 
 function validateNumbers(amount, minimum, maximum) {
     if (amount <= 0) {

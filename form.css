@@ -4,27 +4,28 @@
   transition: opacity 0.25s ease;
 }
 
-#view-result {
+/* #view-result {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
-}
+}  */
 
 
-.show-result #view-sortear {
+ /* .show-result #view-sortear {
   opacity: 0;
   pointer-events: none;
-}
+} */
 
-.show-result #view-result {
+/* .show-result #view-result {
   opacity: 1;
   pointer-events: auto;
-}
+} */
 
 
 
 
 #form-wrap {
+    display: none;
     margin-top: 2rem;
 
     & form {
@@ -202,9 +203,7 @@
 }
 
 #view-result {
-    position: relative;
     & .results {
-        position: absolute;
         top: -30rem;
         margin-top: 4rem;
         & h2 {
@@ -224,50 +223,28 @@
             font-weight: 400;
         }
 
+        & .result-list {
+            & .frame {
+                margin-top: 0;
 
-        & .frame {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-
-            
-            margin-top: 4rem;
-            max-width: 5rem;
-            height: 5rem;
-            background-color: var(--background-brand);
-            border-radius: 1rem;
-
-            opacity: 0;
-            transform: scale(0);
-
-            position: relative;
-            background-color: transparent;
-
-            & p {
-            font: var(--display-medium);
-            /* color: var(--content-brand); */
-            font-weight: 600;
-            }
-
-            &::before {
-                content: '';
-                position: absolute;
-                inset: 0;
+                width: 5rem;
+                height: 5rem;
                 background-color: var(--background-brand);
                 border-radius: 1rem;
+
+                opacity: 0;
+                transform: scale(0);
+
+            }
+            
+            & .frame.animate {
+                animation:
+                frame-in 0.5s ease-out forwards,
+                spin 1s linear infinite;
+
+                animation-delay: 0s, 0.5s;
             }
         }
-
-            & .frame.is-loading {
-                opacity: 1;
-                animation: frame-in 0.5s ease-out forwards;
-
-                &::before {
-                animation: spin 1.2s linear infinite;
-            }
-            }
-
 
         & button {
             position: relative;

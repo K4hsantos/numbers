@@ -1,5 +1,11 @@
 #header {
     margin-top: 2.62rem;
+
+    & img {
+        display: block;
+        margin: 0 auto;
+    }
+
     & span {
         display: block;
         margin-top: 2rem;
@@ -22,6 +28,7 @@
         margin-top: 5.75rem;
 
         & img {
+            display: initial;
             width: 15rem;
         }
 
