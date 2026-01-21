@@ -1,31 +1,32 @@
 #view-sortear {
   opacity: 1;
   pointer-events: auto;
-  transition: opacity 0.25s ease;
+  transition: opacity 3s ease;
+  display: block;
 }
 
-/* #view-result {
+#view-result {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.25s ease;
-}  */
+  transition: opacity 5s ease;
+  display: none;
+} 
 
-
- /* .show-result #view-sortear {
+.show-result #view-sortear {
   opacity: 0;
   pointer-events: none;
-} */
+  display: none;
+}
 
-/* .show-result #view-result {
+
+.show-result #view-result {
   opacity: 1;
   pointer-events: auto;
-} */
-
-
+  display: block;
+}
 
 
 #form-wrap {
-    display: none;
     margin-top: 2rem;
 
     & form {
@@ -224,6 +225,11 @@
         }
 
         & .result-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 4rem;
             & .frame {
                 margin-top: 0;
 
@@ -236,7 +242,7 @@
                 transform: scale(0);
 
             }
-            
+
             & .frame.animate {
                 animation:
                 frame-in 0.5s ease-out forwards,
