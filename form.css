@@ -230,7 +230,9 @@
             justify-content: center;
             gap: 1rem;
             margin-top: 4rem;
+            
             & .frame {
+                align-items: center;
                 margin-top: 0;
 
                 width: 5rem;
@@ -241,6 +243,12 @@
                 opacity: 0;
                 transform: scale(0);
 
+                & p {
+
+                    font: var(--display-medium);
+                    color: red;
+                    font-weight: 600;
+                }
             }
 
             & .frame.animate {
