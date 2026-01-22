@@ -27,6 +27,7 @@
 
 
 #form-wrap {
+    display: none;
     margin-top: 2rem;
 
     & form {
@@ -230,27 +231,39 @@
             justify-content: center;
             gap: 1rem;
             margin-top: 4rem;
-            
-            & .frame {
-                align-items: center;
-                margin-top: 0;
 
-                width: 5rem;
+            & .slot {
+                position: relative;
+                width: 6.5rem;
                 height: 5rem;
-                background-color: var(--background-brand);
-                border-radius: 1rem;
+                flex-shrink: 0;
 
-                opacity: 0;
-                transform: scale(0);
-
-                & p {
-
+                & .number {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-62%, -50%);
+                    margin: 0;
+                    text-align: center;
+                    width: 100%;
                     font: var(--display-medium);
                     color: red;
                     font-weight: 600;
                 }
-            }
 
+                & .frame {
+                    align-items: center;
+                    margin-top: 0;
+
+                    width: 5rem;
+                    height: 5rem;
+                    background-color: var(--background-brand);
+                    border-radius: 1rem;
+
+                    opacity: 0;
+                    transform: scale(0);
+                } 
+            }
             & .frame.animate {
                 animation:
                 frame-in 0.5s ease-out forwards,
