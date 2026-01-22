@@ -32,16 +32,20 @@ for (let i = 0; i < quantidade; i++) {
 
 for (let i = 0; i < numberList.length; i++) {
 
-    const div = document.createElement("div")
-    const p = document.createElement("p")
+    const divSlot = document.createElement("div");
+    const divFrame = document.createElement("div");
+    const p = document.createElement("p");
 
 
-    div.classList.add("frame", "animate")
+    divSlot.classList.add("slot");
+    divFrame.classList.add("frame", "animate");
+    p.classList.add("number");
+
     p.textContent = numberList[i]
 
-
-    div.appendChild(p)
-    resultList.appendChild(div)
+    divSlot.appendChild(divFrame)
+    divSlot.appendChild(p)
+    resultList.appendChild(divSlot)
 }
 
 
