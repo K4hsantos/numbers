@@ -235,8 +235,9 @@
                 position: relative;
                 width: 6.5rem;
                 height: 5rem;
-                flex-shrink: 0;
 
+                animation: expand-space 0.5s ease-out forwards;
+                
                 & .number {
                     position: absolute;
                     top: 50%;
@@ -341,29 +342,43 @@
 
 
 @keyframes number-pop {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0.5);
-  }
-  30% {
-    opacity: 0;
-    color: #000000;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  60% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1.2);
-    color: #000000;
-  }
-  80% {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  100% {
-    opacity: 1;
-    color: var(--content-brand);
-    transform: translate(-50%, -50%) scale(1); 
-  }
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    30% {
+        opacity: 0;
+        color: #000000;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    60% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2);
+        color: #000000;
+    }
+    80% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+        opacity: 1;
+        color: var(--content-brand);
+        transform: translate(-50%, -50%) scale(1); 
+    }
+}
+
+
+@keyframes expand-space {
+    from {
+        width: 0;
+        opacity: 0;
+        margin-right: -1rem;
+    }
+    to {
+        width: 6.5rem;
+        opacity: 1;
+        margin-right: 0;
+    }
 }
 
 
