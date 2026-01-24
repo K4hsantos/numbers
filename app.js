@@ -15,9 +15,8 @@ const quantidade = Number(numberAmount.value);
 const minimo = Number(numberMin.value);
 const maximo = Number(numberMax.value);
 
-const validate = validateNumbers(quantidade, minimo, maximo);
 
-if (validate === false) {
+if (validateNumbers(quantidade, minimo, maximo) === false) {
     return false
 }
 
@@ -30,28 +29,10 @@ for (let i = 0; i < quantidade; i++) {
 
 }
 
-for (let i = 0; i < numberList.length; i++) {
-
-    const divSlot = document.createElement("div");
-    const divFrame = document.createElement("div");
-    const p = document.createElement("p");
-
-
-    divSlot.classList.add("slot");
-    divFrame.classList.add("frame", "animate");
-    p.classList.add("number");
-
-    p.textContent = numberList[i]
-
-    divSlot.appendChild(divFrame)
-    divSlot.appendChild(p)
-    resultList.appendChild(divSlot)
-}
-
+oneTimeNumber(0, numberList);
 
 formLayout.classList.add("show-result");
 })
-
 
 
 function validateNumbers(amount, minimum, maximum) {
@@ -65,4 +46,29 @@ function validateNumbers(amount, minimum, maximum) {
     } else {
         return true
     }
+}
+
+function oneTimeNumber(index, lista) {
+    if (index >= lista.length) {
+        return;
+    }    
+
+    const divSlot = document.createElement("div");
+    const divFrame = document.createElement("div");
+    const p = document.createElement("p");
+
+
+    divSlot.classList.add("slot");
+    divFrame.classList.add("frame", "animate");
+    p.classList.add("number");
+
+    p.textContent = lista[index]
+
+    divSlot.appendChild(divFrame)
+    divSlot.appendChild(p)
+    resultList.appendChild(divSlot)
+
+    setTimeout(() => {
+        oneTimeNumber(index + 1, lista);
+    }, 3000)
 }
