@@ -4,6 +4,7 @@ const numberAmount = document.querySelector("#amount");
 const numberMin = document.querySelector("#min");
 const numberMax = document.querySelector("#max");
 const resultList = document.querySelector(".result-list");
+const checkbox = document.querySelector("#check")
 
 
 
@@ -20,13 +21,24 @@ if (validateNumbers(quantidade, minimo, maximo) === false) {
     return false
 }
 
+
+const noRepeat = checkbox.checked;
 const numberList = [];
 
 resultList.innerHTML = ""
 
-for (let i = 0; i < quantidade; i++) {
-    numberList.push((Math.floor(Math.random() * (maximo - minimo + 1)) + minimo))
+while (numberList.length < quantidade) {
+    
+    const randomNumber = Math.floor(Math.random() * (maximo - minimo + 1)) + minimo;
 
+    if (noRepeat === true) {
+
+        if (!numberList.includes(randomNumber)) {
+            numberList.push(randomNumber);
+        }
+    } else {
+        numberList.push(randomNumber)
+    }
 }
 
 oneTimeNumber(0, numberList);
@@ -72,3 +84,4 @@ function oneTimeNumber(index, lista) {
         oneTimeNumber(index + 1, lista);
     }, 3000)
 }
+
