@@ -5,6 +5,7 @@ const numberMin = document.querySelector("#min");
 const numberMax = document.querySelector("#max");
 const resultList = document.querySelector(".result-list");
 const checkbox = document.querySelector("#check")
+const button = document.querySelector("#btn")
 
 
 
@@ -46,6 +47,12 @@ oneTimeNumber(0, numberList);
 formLayout.classList.add("show-result");
 })
 
+
+button.addEventListener("click", (event)=> {
+resultList.innerHTML = ""
+
+formLayout.classList.remove("show-result");
+})
 
 function validateNumbers(amount, minimum, maximum) {
     if (amount <= 0) {
