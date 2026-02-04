@@ -241,8 +241,8 @@
                 & .number {
                     position: absolute;
                     top: 50%;
-                    left: 50%;
-                    transform: translate(-62%, -50%);
+                    left: 38%;
+                    transform: translate(-62%, -5%);
                     margin: 0;
                     text-align: center;
                     width: 100%;
@@ -441,6 +441,8 @@
         & .result-list {
             & .slot {
                 & .number {
+                    top: 50%;
+                    left: 50%;
                     transform: translate(-51%, -50%);
                 }
             }
